@@ -3,9 +3,9 @@ $(document).ready(function () {
   Chart.defaults.global.defaultFontColor = '#292b2c';
 
   $(".kaffy-editor").each(function () {
-    var textareaId = "#" + $(this).attr('id');
+    var textareaId = $(this).attr('id');
 
-    CKEDITOR.ClassicEditor.create(textareaId, {
+    CKEDITOR.ClassicEditor.create(document.getElementById(textareaId), {
         // https://ckeditor.com/docs/ckeditor5/latest/features/toolbar/toolbar.html#extended-toolbar-configuration-format
       toolbar: {
           items: [
